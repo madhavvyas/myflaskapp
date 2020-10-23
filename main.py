@@ -1,14 +1,6 @@
 from flask import Flask, render_template
-from flask_restful import Resource, Api
 
 app = Flask(__name__)
-api = Api(app)
-
-class HelloWorld(Resource):
-    def get(self):
-        return {'name': 'Mark Smith'}
-
-api.add_resource(HelloWorld, '/apiengine')
 
 # URL mapped with Method
 @app.route('/')
